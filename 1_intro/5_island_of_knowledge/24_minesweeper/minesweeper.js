@@ -1,6 +1,6 @@
 function minesweeper(matrix) {
-    const board = [];
-    const matrixLength = matrix.length;
+    const board = [],
+          matrixLength = matrix.length;
     
     // figure out how to do with forEach
     // matrix.forEach((row) => {
@@ -13,9 +13,9 @@ function minesweeper(matrix) {
     // })
     
     for (let i = 0; i < matrixLength; i++) {
-        let oldRow = matrix[i];
-        let rowLength = oldRow.length;
-        let newRow = [];
+        let oldRow = matrix[i],
+            rowLength = oldRow.length,
+            newRow = [];
         for (let j = 0; j < rowLength; j++) {
             newRow.push(clockCheck(matrix, matrixLength, i, rowLength, j));
         }
