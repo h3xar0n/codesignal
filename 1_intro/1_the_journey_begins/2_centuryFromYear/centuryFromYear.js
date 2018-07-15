@@ -1,15 +1,5 @@
 function centuryFromYear(year) {
-    var included = true
-    // find years beyond increment of 100
-    var spare = year % 100
-    if (spare > 0) {
-        included = false 
-    }
-    // the actual century
-    var century = year / 100
-    // if the year is not a perfect increment of 100, to get the correct century, do not count past the year. 
-    if (included == true) {
-        century -= 1
-    }
-    return century - (spare / 100) + 1
+    // divide by 100 and round down to avoid remainder, e.g. 1999 and 1901 both give 19
+    // and then add 1 for the century, e.g. 1901 and 1999 were both in the 20th century
+    return Math.floor((year - 1)/ 100) + 1
 }
