@@ -1,4 +1,4 @@
-#Add
+## add
 
 Write a function that returns the sum of two numbers.
 
@@ -7,20 +7,20 @@ Write a function that returns the sum of two numbers.
 For `param1 = 1` and `param2 = 2`, the output should be
 `add(param1, param2) = 3`.
 
-Input/Output
+### Input/Output
 
-[execution time limit] 4 seconds
+* [execution time limit] 4 seconds
 
-[input] integer param1
+* [input] integer param1
 
-### Guaranteed constraints:
+Guaranteed constraints:
 `-1000 ≤ param1 ≤ 1000.`
 
-[input] integer param2
+* [input] integer param2
 
-### Guaranteed constraints:
+Guaranteed constraints:
 `-1000 ≤ param2 ≤ 1000.`
 
-[output] integer
+* [output] integer
 
 The sum of the two inputs.
