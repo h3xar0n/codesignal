@@ -12,6 +12,5 @@ function makeArrayConsecutive2(statues) {
             neededStatues = neededStatues + checkSpace
         }
     }
-    console.log(statues)
     return neededStatues
 }
