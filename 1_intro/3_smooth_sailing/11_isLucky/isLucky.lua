@@ -1,17 +1,13 @@
 function isLucky(n)
   local firstHalfSum = 0
   local secondHalfSum = 0
-  local serializedValues = {}
-  for i=1, #n do
-    serializedValues[i] = n[i]
+  number = tostring(n)
+  halfpoint = string.len(number) / 2
+  for i = 1, halfpoint do
+    firstHalfSum = firstHalfSum + string.sub(number, i, i)
   end
-  local fullLength = table.getn(serializedValues)
-  local firstHalf = fullLength / 2
-  for i=1, firstHalf do
-    firstHalfSum = firstHalfSum + serializedValues[i]
-  end
-  for i=firstHalf+1, fullLength do
-    secondHalfSum = secondHalfSum + serializedValues[i]
+  for i = halfpoint + 1, string.len(number) do
+    secondHalfSum = secondHalfSum + string.sub(number, i, i)
   end
   if firstHalfSum == secondHalfSum then
     return true
