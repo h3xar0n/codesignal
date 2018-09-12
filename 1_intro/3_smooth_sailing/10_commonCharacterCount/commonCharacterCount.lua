@@ -4,7 +4,7 @@ function commonCharacterCount(s1, s2)
   local output = 0
   stringCount(s1, alphabet1)
   stringCount(s2, alphabet2)
-  for char, count in alphabet1 do
+  for char, count in pairs(alphabet1) do
     if alphabet2[char] ~= nil then
       if alphabet1[char] < alphabet2[char] then
         output = output + alphabet1[char]
